@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mockup_app/home_page.dart';
 import 'package:mockup_app/splash_page.dart';
 
 void main() {
@@ -12,8 +13,15 @@ class MockupApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          brightness: Brightness.dark,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.black,
+          )),
+      initialRoute: '/homepage',
       routes: {
         '/': (context) => const SplashPage(),
+        '/homepage': (context) => const HomePage(),
       },
     );
   }
