@@ -14,10 +14,20 @@ class MockupApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          brightness: Brightness.dark,
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.black,
-          )),
+        brightness: Brightness.dark,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+        ),
+        textTheme: const TextTheme(
+            headline1: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 20,
+                color: Color.fromARGB(255, 237, 244, 248)),
+            headline6: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 12,
+                color: Color.fromARGB(255, 237, 244, 248))),
+      ),
       initialRoute: '/homepage',
       routes: {
         '/': (context) => const SplashPage(),
