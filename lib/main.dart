@@ -14,11 +14,12 @@ class MockupApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
-        ),
-        textTheme: const TextTheme(
+          backgroundColor: const Color.fromARGB(255, 18, 21, 23),
+          brightness: Brightness.dark,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Color.fromARGB(255, 18, 21, 23),
+          ),
+          textTheme: const TextTheme(
             headline1: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 20,
@@ -26,12 +27,16 @@ class MockupApp extends StatelessWidget {
             headline6: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 12,
-                color: Color.fromARGB(255, 237, 244, 248))),
-      ),
-      initialRoute: '/homepage',
+                color: Color.fromARGB(255, 237, 244, 248)),
+            headline5: TextStyle(
+                fontFamily: 'Montserrat',
+                fontSize: 12,
+                color: Color.fromARGB(255, 237, 244, 248)),
+          )),
+      initialRoute: '/',
       routes: {
-        '/': (context) => const SplashPage(),
-        '/homepage': (context) => const HomePage(),
+        '/': (context) => const HomePage(),
+        '/homepage': (context) => const SplashPage(),
       },
     );
   }

@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-
-import 'my_appbar.dart';
+import 'package:mockup_app/menu_botton.dart';
+import 'package:mockup_app/menutop.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
-      child: MyScaffold(
-        child: Center(),
+    return SafeArea(
+      child: Scaffold(
+        body: Scaffold(
+          bottomNavigationBar: const MyMenuBotton(),
+          body: Column(
+            children: const [
+              MenuTop(),
+            ],
+          ),
+        ),
       ),
     );
   }
