@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CardsWidget extends StatelessWidget {
+  final void Function() onPressed;
   final Image image;
   final String title;
   final int amountExercise;
@@ -12,6 +13,7 @@ class CardsWidget extends StatelessWidget {
     required this.title,
     required this.amountExercise,
     required this.bodyText,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -30,7 +32,7 @@ class CardsWidget extends StatelessWidget {
             _HeadCard(
                 image: image, title: title, amountExercise: amountExercise),
             BodyCard(bodyText: bodyText),
-            const BottomCard(),
+            BottomCard(onPressed: onPressed),
           ],
         ),
       ),
@@ -109,8 +111,10 @@ class BodyCard extends StatelessWidget {
 }
 
 class BottomCard extends StatelessWidget {
+  final void Function() onPressed;
   const BottomCard({
     Key? key,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -134,7 +138,7 @@ class BottomCard extends StatelessWidget {
           SizedBox(
             width: 120,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: onPressed,
               child: const Text('Ver Mais'),
               style: ButtonStyle(
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(

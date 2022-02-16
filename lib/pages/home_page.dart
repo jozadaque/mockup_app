@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CardModel> cards = CardModel.cards;
+    List<CardModel> cards = CardModel.cards(context);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
@@ -29,6 +29,7 @@ class HomePage extends StatelessWidget {
                 children: cards
                     .map(
                       (e) => CardsWidget(
+                          onPressed: e.onPressed,
                           image: e.image,
                           title: e.title,
                           amountExercise: e.amountExercise,

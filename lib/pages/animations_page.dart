@@ -18,7 +18,9 @@ class AnimationsPage extends StatelessWidget {
               title: 'Animações',
               subtitle: 'Flutterando Masterclass',
               image: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
                   icon: Image.asset(
                       'assets/images/Icon ionic-ios-arrow-back.png')),
             ),
