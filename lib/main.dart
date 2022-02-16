@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/pages/homepage/home_page.dart';
-import 'package:mockup_app/pages/splash/splash_page.dart';
+import 'package:mockup_app/pages/home_page.dart';
+import 'package:mockup_app/pages/splash_page.dart';
 
 void main() {
   runApp(const MockupApp());
