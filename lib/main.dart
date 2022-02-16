@@ -37,10 +37,10 @@ class MockupApp extends StatelessWidget {
               fontFamily: 'Montserrat', fontSize: 14, color: Color(0xFF51565A)),
         ),
       ),
-      initialRoute: '/animation',
+      initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
-        '/homepage': (context) => const SplashPage(),
+        '/': (context) => const SplashPage(),
+        '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
       },
     );
