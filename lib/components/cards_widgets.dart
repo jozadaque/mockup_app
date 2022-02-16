@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CardsWidget extends StatelessWidget {
-  const CardsWidget({Key? key}) : super(key: key);
+  final Image image;
+  final String title;
+  final int amountExercise;
+  final Text bodyText;
+
+  const CardsWidget({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.amountExercise,
+    required this.bodyText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +26,27 @@ class CardsWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
-          children: const [HeadCard(), BodyCard(), BottomCard()],
+          children: [
+            _HeadCard(
+                image: image, title: title, amountExercise: amountExercise),
+            BodyCard(bodyText: bodyText),
+            const BottomCard(),
+          ],
         ),
       ),
     );
   }
 }
 
-class HeadCard extends StatelessWidget {
-  const HeadCard({
+class _HeadCard extends StatelessWidget {
+  final Image image;
+  final String title;
+  final int amountExercise;
+  const _HeadCard({
     Key? key,
+    required this.image,
+    required this.title,
+    required this.amountExercise,
   }) : super(key: key);
 
   @override
@@ -37,13 +59,13 @@ class HeadCard extends StatelessWidget {
           Row(
             children: [
               CircleAvatar(
-                child: Image.asset('assets/images/Icon awesome-running.png'),
+                child: image,
               ),
               const SizedBox(
                 width: 15,
               ),
               Text(
-                'Animações',
+                title,
                 style: Theme.of(context).textTheme.headline2,
               )
             ],
@@ -57,9 +79,9 @@ class HeadCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ),
-              const Text(
-                '4',
-                style: TextStyle(
+              Text(
+                '$amountExercise',
+                style: const TextStyle(
                     color: Colors.white, fontFamily: 'Poppins', fontSize: 10),
               ),
             ],
@@ -71,16 +93,17 @@ class HeadCard extends StatelessWidget {
 }
 
 class BodyCard extends StatelessWidget {
+  final Text bodyText;
   const BodyCard({
     Key? key,
+    required this.bodyText,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 15),
-      child: Text(
-          'Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos '),
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 15),
+      child: bodyText,
     );
   }
 }
