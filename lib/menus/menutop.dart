@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MenuTop extends StatelessWidget {
-  final String namePage;
-  const MenuTop({Key? key, required this.namePage}) : super(key: key);
+  final String title;
+  final String subtitle;
+  final Widget image;
+  const MenuTop(
+      {Key? key, required this.title, this.subtitle = '', required this.image})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +19,9 @@ class MenuTop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Logo(
-                page: namePage,
+                title: title,
+                subtitle: subtitle,
+                image: image,
               ),
               IconButton(
                 onPressed: () {},
@@ -30,8 +36,12 @@ class MenuTop extends StatelessWidget {
 }
 
 class Logo extends StatelessWidget {
-  final String page;
-  const Logo({Key? key, required this.page}) : super(key: key);
+  final String title;
+  final String subtitle;
+  final Widget image;
+  const Logo(
+      {Key? key, required this.title, this.subtitle = '', required this.image})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,19 +49,19 @@ class Logo extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 10.0),
-          child: Image.asset('assets/images/logo.png'),
+          child: image,
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 12.0, left: 4),
+          padding: const EdgeInsets.only(top: 12.0, left: 6),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                page,
+                title,
                 style: Theme.of(context).textTheme.headline1,
               ),
               Text(
-                'Fluttando Masterclass',
+                subtitle,
                 style: Theme.of(context).textTheme.headline6,
               ),
             ],

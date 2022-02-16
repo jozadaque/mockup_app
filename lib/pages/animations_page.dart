@@ -5,8 +5,8 @@ import 'package:mockup_app/menus/menutop.dart';
 
 import '../models/card_model.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class AnimationsPage extends StatelessWidget {
+  const AnimationsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,24 +18,17 @@ class HomePage extends StatelessWidget {
         body: Column(
           children: [
             MenuTop(
-              title: 'Repositórios',
+              title: 'Animações',
               subtitle: 'Flutterando Masterclass',
-              image: Image.asset('assets/images/logo.png'),
+              image: IconButton(
+                  onPressed: () {},
+                  icon: Image.asset(
+                      'assets/images/Icon ionic-ios-arrow-back.png')),
             ),
             SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height - 198,
-              child: ListView(
-                children: cards
-                    .map(
-                      (e) => CardsWidget(
-                          image: e.image,
-                          title: e.title,
-                          amountExercise: e.amountExercise,
-                          bodyText: e.bodyText),
-                    )
-                    .toList(),
-              ),
+              child: ListView(children: []),
             ),
           ],
         ),

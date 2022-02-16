@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mockup_app/pages/animations_page.dart';
 import 'package:mockup_app/pages/home_page.dart';
 import 'package:mockup_app/pages/splash_page.dart';
 
@@ -36,10 +37,11 @@ class MockupApp extends StatelessWidget {
               fontFamily: 'Montserrat', fontSize: 14, color: Color(0xFF51565A)),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => const HomePage(),
         '/homepage': (context) => const SplashPage(),
+        '/animation': (context) => const AnimationsPage(),
       },
     );
   }
