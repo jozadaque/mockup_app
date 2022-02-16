@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MenuTop extends StatelessWidget {
-  const MenuTop({Key? key}) : super(key: key);
+  final String namePage;
+  const MenuTop({Key? key, required this.namePage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,11 +10,13 @@ class MenuTop extends StatelessWidget {
       children: [
         Container(
           height: 70,
-          decoration: const BoxDecoration(color: Colors.black),
+          decoration: const BoxDecoration(color: Colors.transparent),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Logo(),
+              Logo(
+                page: namePage,
+              ),
               IconButton(
                 onPressed: () {},
                 icon: Image.asset('assets/images/Icon awesome-moon.png'),
@@ -27,11 +30,11 @@ class MenuTop extends StatelessWidget {
 }
 
 class Logo extends StatelessWidget {
-  const Logo({Key? key}) : super(key: key);
+  final String page;
+  const Logo({Key? key, required this.page}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    String page = 'Atividades';
     return Row(
       children: [
         Padding(
