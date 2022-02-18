@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mockup_app/components/cards_apresentation.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
@@ -18,7 +19,7 @@ class _AboutDevState extends State<AboutDev> {
         body: Column(
           children: [
             MenuTop(
-              title: 'Animações',
+              title: 'Sobre o Dev',
               subtitle: 'Flutterando Masterclass',
               image: IconButton(
                   onPressed: () {
@@ -30,7 +31,9 @@ class _AboutDevState extends State<AboutDev> {
               width: double.infinity,
               height: MediaQuery.of(context).size.height - 198,
               child: ListView(
-                children: [],
+                children: const [
+                  CardsApresentationsWidget(),
+                ],
               ),
             ),
           ],
