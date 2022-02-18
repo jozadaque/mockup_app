@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mockup_app/pages/about_dev.dart';
 import 'package:mockup_app/pages/animations_page.dart';
 import 'package:mockup_app/pages/home_page.dart';
 import 'package:mockup_app/pages/splash_page.dart';
@@ -15,11 +16,7 @@ class MockupApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        backgroundColor: const Color.fromARGB(1, 18, 21, 23),
-        //brightness: Brightness.dark,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 18, 21, 23),
-        ),
+        scaffoldBackgroundColor: const Color(0xFF121517),
         textTheme: const TextTheme(
           button: TextStyle(
               fontFamily: 'Poppins', fontSize: 12, color: Color(0xFFEDF4F8)),
@@ -39,9 +36,10 @@ class MockupApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const SplashPage(),
+        '/': (context) => const AboutDev(),
         '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
+        '/aboutdev': (context) => const SplashPage(),
       },
     );
   }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CardsWidget extends StatelessWidget {
+class CardsHomeWidget extends StatelessWidget {
   final void Function() onPressed;
   final Image image;
   final String title;
   final int amountExercise;
   final Text bodyText;
 
-  const CardsWidget({
+  const CardsHomeWidget({
     Key? key,
     required this.image,
     required this.title,

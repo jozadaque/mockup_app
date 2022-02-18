@@ -9,7 +9,7 @@ class MyMenuBotton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 65,
-      color: Colors.black,
+      color: Colors.transparent,
       child: Row(
         children: const [
           Expanded(

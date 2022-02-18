@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/components/lines_exercises.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
-class AnimationsPage extends StatelessWidget {
-  const AnimationsPage({Key? key}) : super(key: key);
+class AboutDev extends StatefulWidget {
+  const AboutDev({Key? key}) : super(key: key);
 
+  @override
+  _AboutDevState createState() => _AboutDevState();
+}
+
+class _AboutDevState extends State<AboutDev> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,18 +24,14 @@ class AnimationsPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  icon: Image.asset(
-                      'assets/images/Icon ionic-ios-arrow-back.png')),
+                  icon: Image.asset('assets/images/logo.png')),
             ),
             SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height - 198,
               child: ListView(
-                  children: List.generate(
-                      4,
-                      (index) => LineExercises(
-                            count: index + 1,
-                          ))),
+                children: [],
+              ),
             ),
           ],
         ),

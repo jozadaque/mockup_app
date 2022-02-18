@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/components/cards_widgets.dart';
+import 'package:mockup_app/components/cards_homes.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
@@ -13,7 +13,6 @@ class HomePage extends StatelessWidget {
     List<CardModel> cards = CardModel.cards(context);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
         bottomNavigationBar: const MyMenuBotton(),
         body: Column(
           children: [
@@ -28,7 +27,7 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 children: cards
                     .map(
-                      (e) => CardsWidget(
+                      (e) => CardsHomeWidget(
                           onPressed: e.onPressed,
                           image: e.image,
                           title: e.title,
