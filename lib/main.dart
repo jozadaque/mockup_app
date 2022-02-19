@@ -18,6 +18,8 @@ class MockupApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF121517),
         textTheme: const TextTheme(
+          caption: TextStyle(
+              fontFamily: 'Poppins', fontSize: 14, color: Color(0xFFEDF4F8)),
           button: TextStyle(
               fontFamily: 'Poppins', fontSize: 12, color: Color(0xFFEDF4F8)),
           headline1: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mockup_app/components/cards_apresentation.dart';
+import 'package:mockup_app/components/favorite_tecnologies.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
@@ -33,6 +34,7 @@ class _AboutDevState extends State<AboutDev> {
               child: ListView(
                 children: const [
                   CardsApresentationsWidget(),
+                  FavoriteTecnologies(),
                 ],
               ),
             ),
