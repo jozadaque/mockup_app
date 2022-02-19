@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mockup_app/components/cards_apresentation.dart';
 import 'package:mockup_app/components/favorite_tecnologies.dart';
+import 'package:mockup_app/components/habilities_compentencies.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
@@ -35,6 +36,7 @@ class _AboutDevState extends State<AboutDev> {
                 children: const [
                   CardsApresentationsWidget(),
                   FavoriteTecnologies(),
+                  HabilitesCompetenciesWidget(),
                 ],
               ),
             ),
