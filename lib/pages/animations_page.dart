@@ -27,11 +27,15 @@ class AnimationsPage extends StatelessWidget {
               width: double.infinity,
               height: MediaQuery.of(context).size.height - 198,
               child: ListView(
-                  children: List.generate(
-                      4,
-                      (index) => LineExercises(
-                            count: index + 1,
-                          ))),
+                children: const [
+                  LineExercises(count: 1, route: '/tinderfake'),
+                  LineExercises(count: 2, route: '/mymoneyapp'),
+                  LineExercises(count: 3, route: '/myfloatbutton'),
+                  LineExercises(count: 4, route: '/myfloatbuttonanimated'),
+                  LineExercises(count: 5, route: '/myexpansiontile'),
+                  LineExercises(count: 6, route: '/myexpansiontileanimated'),
+                ],
+              ),
             ),
           ],
         ),

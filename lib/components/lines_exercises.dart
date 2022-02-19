@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class LineExercises extends StatelessWidget {
+  final String route;
   final int count;
   const LineExercises({
     Key? key,
     required this.count,
+    required this.route,
   }) : super(key: key);
 
   @override
@@ -25,8 +27,11 @@ class LineExercises extends StatelessWidget {
               CircleAvatar(
                 child: Text('$count'),
               ),
-              Text('Exercicios 01',
-                  style: Theme.of(context).textTheme.headline2)
+              GestureDetector(
+                onTap: () => Navigator.of(context).pushNamed(route),
+                child: Text('Exercicios 01',
+                    style: Theme.of(context).textTheme.headline2),
+              )
             ],
           ),
         ),

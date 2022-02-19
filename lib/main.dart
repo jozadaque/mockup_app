@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mockup_app/exercicios/floating_button_explicit_animation/main.dart';
+import 'package:mockup_app/exercicios/my_expansion_tile/my_expansiontile_main.dart';
+import 'package:mockup_app/exercicios/my_extension_tile_with_animation/my_expansion_tile_main.dart';
+import 'package:mockup_app/exercicios/my_money_app/my_money_app.dart';
+import 'package:mockup_app/exercicios/myfloatbutton/flooating_button_main.dart';
+import 'package:mockup_app/exercicios/tinder_fake/my_tinder_fake.dart';
 import 'package:mockup_app/pages/about_dev.dart';
 import 'package:mockup_app/pages/animations_page.dart';
 import 'package:mockup_app/pages/home_page.dart';
@@ -42,6 +48,14 @@ class MockupApp extends StatelessWidget {
         '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
         '/aboutdev': (context) => const AboutDev(),
+        '/tinderfake': (context) => const TinderFake(),
+        '/mymoneyapp': (context) => const MyMoneyApp(),
+        '/myfloatbuttonanimated': (context) => const MyFloatButtonAnimated(),
+        '/myfloatbutton': (context) => const MyFloatButton(),
+        '/myexpansiontileanimated': (context) =>
+            const MyExtensionTileAnimated(),
+        '/myexpansiontile': (context) =>
+            const MyImplicetAnimatedExpansionTile(),
       },
     );
   }
