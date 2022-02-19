@@ -38,10 +38,10 @@ class MockupApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const AboutDev(),
+        '/': (context) => const SplashPage(),
         '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
-        '/aboutdev': (context) => const SplashPage(),
+        '/aboutdev': (context) => const AboutDev(),
       },
     );
   }

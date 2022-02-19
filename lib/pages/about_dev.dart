@@ -27,7 +27,7 @@ class _AboutDevState extends State<AboutDev> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  icon: Image.asset('assets/images/logo.png')),
+                  icon: Image.asset('assets/images/logo@2x.png')),
             ),
             SizedBox(
               width: double.infinity,

@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         body: Column(
           children: [
             MenuTop(
-              title: 'Repositórios',
+              title: 'Atividades',
               subtitle: 'Flutterando Masterclass',
               image: Image.asset('assets/images/logo.png'),
             ),

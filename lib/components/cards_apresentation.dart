@@ -8,7 +8,7 @@ class CardsApresentationsWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 12.0, right: 12.0),
       child: Container(
-        height: 300,
+        height: 285,
         decoration: BoxDecoration(
           color: const Color(0XFF172026),
           borderRadius: BorderRadius.circular(20),

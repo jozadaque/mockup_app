@@ -48,7 +48,9 @@ class CardModel {
             'Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos '),
         title: 'Animações',
         amountExercise: 4,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('/animation');
+        },
       ),
       CardModel(
         image: Image.asset('assets/images/Icon awesome-glasses.png'),
