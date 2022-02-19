@@ -3,8 +3,8 @@ import 'package:mockup_app/components/lines_exercises.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
-class AnimationsPage extends StatelessWidget {
-  const AnimationsPage({Key? key}) : super(key: key);
+class ReadMockupPage extends StatelessWidget {
+  const ReadMockupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class AnimationsPage extends StatelessWidget {
         body: Column(
           children: [
             MenuTop(
-              title: 'Animações',
+              title: 'Leitura de Mockup',
               subtitle: 'Flutterando Masterclass',
               image: IconButton(
                   onPressed: () {
@@ -28,10 +28,8 @@ class AnimationsPage extends StatelessWidget {
               height: MediaQuery.of(context).size.height - 198,
               child: ListView(
                 children: const [
-                  LineExercises(count: 1, route: '/myfloatbutton'),
-                  LineExercises(count: 2, route: '/myfloatbuttonanimated'),
-                  LineExercises(count: 3, route: '/myexpansiontile'),
-                  LineExercises(count: 4, route: '/myexpansiontileanimated'),
+                  LineExercises(count: 1, route: '/tinderfake'),
+                  LineExercises(count: 2, route: '/mymoneyapp'),
                 ],
               ),
             ),

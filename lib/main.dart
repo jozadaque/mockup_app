@@ -8,6 +8,7 @@ import 'package:mockup_app/exercicios/tinder_fake/my_tinder_fake.dart';
 import 'package:mockup_app/pages/about_dev.dart';
 import 'package:mockup_app/pages/animations_page.dart';
 import 'package:mockup_app/pages/home_page.dart';
+import 'package:mockup_app/pages/reading_mockup.dart';
 import 'package:mockup_app/pages/splash_page.dart';
 
 void main() {
@@ -48,6 +49,7 @@ class MockupApp extends StatelessWidget {
         '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
         '/aboutdev': (context) => const AboutDev(),
+        '/readingmockup': (context) => const ReadMockupPage(),
         '/tinderfake': (context) => const TinderFake(),
         '/mymoneyapp': (context) => const MyMoneyApp(),
         '/myfloatbuttonanimated': (context) => const MyFloatButtonAnimated(),

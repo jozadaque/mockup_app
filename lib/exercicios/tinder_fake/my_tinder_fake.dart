@@ -15,7 +15,7 @@ class TinderFake extends StatelessWidget {
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.of(context).pushNamed('/homepage');
+              Navigator.of(context).pop();
             },
             backgroundColor: Colors.pink,
             elevation: 0,

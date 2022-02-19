@@ -33,7 +33,9 @@ class CardModel {
             'Aplicação da técnica de leitura de mockup, contendo 2 exercícios'),
         title: 'Leitura de Mockup',
         amountExercise: 2,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('/readingmockup');
+        },
       ),
       CardModel(
         image: Image.asset('assets/images/Icon material-toys.png'),
@@ -58,7 +60,9 @@ class CardModel {
             'Aplicação da técnica de leitura de mockup, contendo 2 exercícios'),
         title: 'Leitura de Mockup',
         amountExercise: 2,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('/readingmockup');
+        },
       ),
     ];
   }
