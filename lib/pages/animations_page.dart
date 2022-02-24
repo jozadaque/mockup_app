@@ -32,6 +32,7 @@ class AnimationsPage extends StatelessWidget {
                   LineExercises(count: 2, route: '/myfloatbuttonanimated'),
                   LineExercises(count: 3, route: '/myexpansiontile'),
                   LineExercises(count: 4, route: '/myexpansiontileanimated'),
+                  LineExercises(count: 5, route: '/geradordecpf'),
                 ],
               ),
             ),

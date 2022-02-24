@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mockup_app/exercicios/floating_button_explicit_animation/main.dart';
+import 'package:mockup_app/exercicios/gerador_de_cpf/main.dart';
 import 'package:mockup_app/exercicios/my_expansion_tile/my_expansiontile_main.dart';
 import 'package:mockup_app/exercicios/my_extension_tile_with_animation/my_expansion_tile_main.dart';
 import 'package:mockup_app/exercicios/my_money_app/my_money_app.dart';
@@ -58,6 +59,7 @@ class MockupApp extends StatelessWidget {
             const MyExtensionTileAnimated(),
         '/myexpansiontile': (context) =>
             const MyImplicetAnimatedExpansionTile(),
+        '/geradordecpf': (context) => const GeradorDeCpf()
       },
     );
   }
