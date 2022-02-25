@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/components/lines_exercises.dart';
+import 'package:mockup_app/components/line_exercises.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
 
@@ -28,8 +28,12 @@ class ReadMockupPage extends StatelessWidget {
               height: MediaQuery.of(context).size.height - 198,
               child: ListView(
                 children: const [
-                  LineExercises(count: 1, route: '/tinderfake'),
-                  LineExercises(count: 2, route: '/mymoneyapp'),
+                  LineExercises(
+                      count: 1, route: '/tinderfake', title: 'Tinder Fake'),
+                  LineExercises(
+                      count: 2, route: '/mymoneyapp', title: 'App MyMoneyApp'),
+                  LineExercises(
+                      count: 3, route: '/geradordecpf', title: 'Gerador de CPF')
                 ],
               ),
             ),
