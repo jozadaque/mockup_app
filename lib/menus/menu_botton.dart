@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:mockup_app/controler/button_controller.dart';
 
-class MyMenuBotton extends StatelessWidget {
+class MyMenuBotton extends StatefulWidget {
   const MyMenuBotton({
     Key? key,
   }) : super(key: key);
+
+  @override
+  State<MyMenuBotton> createState() => _MyMenuBottonState();
+}
+
+class _MyMenuBottonState extends State<MyMenuBotton> {
+  ButtonController controller = ButtonController.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -15,22 +22,18 @@ class MyMenuBotton extends StatelessWidget {
           color: Colors.transparent,
           child: Padding(
             padding: const EdgeInsets.only(left: 43.0, right: 43, top: 10),
-            child: AnimatedBuilder(
-                animation: ButtonController.instance,
-                builder: (context, snapshot) {
-                  return AnimatedAlign(
-                    duration: const Duration(milliseconds: 200),
-                    alignment: ButtonController.instance.position,
-                    child: Container(
-                      width: 50,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.white12,
-                      ),
-                    ),
-                  );
-                }),
+            child: AnimatedAlign(
+              duration: const Duration(milliseconds: 300),
+              alignment: controller.position,
+              child: Container(
+                width: 50,
+                height: 30,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.white12,
+                ),
+              ),
+            ),
           ),
         ),
         Container(
@@ -43,9 +46,9 @@ class MyMenuBotton extends StatelessWidget {
                 label: 'Atividades',
                 urlImage: 'assets/images/Icon feather-target.png',
                 onPressed: () {
+                  setState(() {});
                   ButtonController.instance
                       .changeButtonPosition(Alignment.topLeft);
-                  Navigator.of(context).pushReplacementNamed('/homepage');
                 },
               )),
               const Line(),
@@ -54,6 +57,7 @@ class MyMenuBotton extends StatelessWidget {
                 label: 'Repositorios',
                 urlImage: 'assets/images/Icon awesome-github.png',
                 onPressed: () {
+                  setState(() {});
                   ButtonController.instance
                       .changeButtonPosition(Alignment.topCenter);
                 },
@@ -64,9 +68,9 @@ class MyMenuBotton extends StatelessWidget {
                 label: 'Sobre o Dev',
                 urlImage: 'assets/images/Icon person.png',
                 onPressed: () {
+                  setState(() {});
                   ButtonController.instance
                       .changeButtonPosition(Alignment.topRight);
-                  Navigator.of(context).pushReplacementNamed('/aboutdev');
                 },
               )),
             ],
