@@ -1,45 +1,51 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/components/cards_homes.dart';
+import 'package:mockup_app/controler/button_controller.dart';
 import 'package:mockup_app/menus/menu_botton.dart';
 import 'package:mockup_app/menus/menutop.dart';
+import 'package:mockup_app/pages/about_dev.dart';
+import 'package:mockup_app/pages/apresentation_page.dart';
 
-import '../models/card_model.dart';
-
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  PageController controller = ButtonController.instance.controller;
+  @override
   Widget build(BuildContext context) {
-    List<CardModel> cards = CardModel.cards(context);
     return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: const MyMenuBotton(),
-        body: Column(
-          children: [
-            MenuTop(
-              title: 'Atividades',
-              subtitle: 'Flutterando Masterclass',
-              image: Image.asset('assets/images/logo.png'),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height - 198,
-              child: ListView(
-                children: cards
-                    .map(
-                      (e) => CardsHomeWidget(
-                          onPressed: e.onPressed,
-                          image: e.image,
-                          title: e.title,
-                          amountExercise: e.amountExercise,
-                          bodyText: e.bodyText),
-                    )
-                    .toList(),
+        child: Scaffold(
+      body: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            children: [
+              Expanded(
+                  flex: 1,
+                  child: MenuTop(
+                      title: 'Atividades',
+                      subtitle: 'Subtitulo',
+                      image: Image.asset('assets/images/logo.png'))),
+              Expanded(
+                flex: 8,
+                child: PageView(
+                  controller: controller,
+                  children: const [
+                    ApresentationPage(),
+                    Center(child: Text('Page 1')),
+                    AboutDev(),
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+              const Expanded(
+                flex: 1,
+                child: MyMenuBotton(),
+              ),
+            ],
+          )),
+    ));
   }
 }
