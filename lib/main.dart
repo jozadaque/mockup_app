@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:mockup_app/exercicios/floating_button_explicit_animation/main.dart';
-import 'package:mockup_app/exercicios/gerador_de_cpf/main.dart';
-import 'package:mockup_app/exercicios/my_expansion_tile/my_expansiontile_main.dart';
-import 'package:mockup_app/exercicios/my_extension_tile_with_animation/my_expansion_tile_main.dart';
-import 'package:mockup_app/exercicios/my_money_app/my_money_app.dart';
-import 'package:mockup_app/exercicios/myfloatbutton/flooating_button_main.dart';
-import 'package:mockup_app/exercicios/tinder_fake/my_tinder_fake.dart';
-import 'package:mockup_app/pages/about_dev.dart';
-import 'package:mockup_app/pages/animations_page.dart';
-import 'package:mockup_app/pages/home_page.dart';
-import 'package:mockup_app/pages/reading_mockup.dart';
-import 'package:mockup_app/pages/splash_page.dart';
+import 'package:mockup_app/src/exercicios/animations/floating_button_explicit_animation/main.dart';
+import 'package:mockup_app/src/exercicios/gerador_de_cpf/main.dart';
+import 'package:mockup_app/src/exercicios/animations/my_expansion_tile/my_expansiontile_main.dart';
+import 'package:mockup_app/src/exercicios/animations/my_extension_tile_with_animation/my_expansion_tile_main.dart';
+import 'package:mockup_app/src/exercicios/screens/my_money_app/my_money_app.dart';
+import 'package:mockup_app/src/exercicios/animations/myfloatbutton/flooating_button_main.dart';
+import 'package:mockup_app/src/exercicios/screens/tinder_fake/my_tinder_fake.dart';
+import 'package:mockup_app/src/views/pages/about_dev.dart';
+import 'package:mockup_app/src/views/pages/animations_page.dart';
+import 'package:mockup_app/src/views/pages/home_page.dart';
+import 'package:mockup_app/src/views/pages/reading_mockup.dart';
+import 'package:mockup_app/src/views/pages/splash_page.dart';
 
 void main() {
   runApp(const MockupApp());
@@ -46,10 +46,13 @@ class MockupApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
+        ///Pages View
         '/': (context) => const SplashPage(),
         '/homepage': (context) => const HomePage(),
         '/animation': (context) => const AnimationsPage(),
         '/aboutdev': (context) => const AboutDev(),
+
+        ///Exercices
         '/readingmockup': (context) => const ReadMockupPage(),
         '/tinderfake': (context) => const TinderFake(),
         '/mymoneyapp': (context) => const MyMoneyApp(),
