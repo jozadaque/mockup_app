@@ -9,4 +9,8 @@ class TodoModel {
     required this.title,
     required this.isChecked,
   });
+
+  factory TodoModel.fromJsom(dynamic json) {
+    return TodoModel(title: json['title'], isChecked: json['completed']);
+  }
 }
